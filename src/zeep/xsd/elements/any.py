@@ -160,9 +160,9 @@ class Any(Base):
         else:
             if isinstance(value.value, list):
                 for val in value.value:
-                    value.xsd_elm.render(parent, val, render_path)
+                    value.xsd_elm.render(parent, val, render_path=render_path)
             else:
-                value.xsd_elm.render(parent, value.value, render_path)
+                value.xsd_elm.render(parent, value.value, render_path=render_path)
 
     def validate(self, value, render_path):
         if self.accepts_multiple and isinstance(value, list):
