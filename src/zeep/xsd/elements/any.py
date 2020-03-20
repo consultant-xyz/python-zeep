@@ -50,8 +50,8 @@ class Any(Base):
         return True
 
     def parse(self, xmlelement, schema, context=None):
-        if self.process_contents == "skip":
-            return xmlelement
+        # if self.process_contents == "skip":
+        #     return xmlelement
 
         # If a schema was passed inline then check for a matching one
         qname = etree.QName(xmlelement.tag)
